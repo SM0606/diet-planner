@@ -1,0 +1,269 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #050505;
+}
+
+button, input, select {
+  font: inherit;
+}
+
+.app {
+  min-height: 100vh;
+  color: white;
+  background:
+    radial-gradient(circle at top left, rgba(249, 115, 22, 0.38), transparent 36rem),
+    linear-gradient(135deg, #1b0b02, #080808 45%, #000);
+  padding: 24px;
+}
+
+.container {
+  max-width: 1180px;
+  margin: 0 auto;
+  display: grid;
+  gap: 24px;
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 20px;
+}
+
+.eyebrow {
+  color: #fb923c;
+  font-weight: 700;
+  margin: 0 0 8px;
+}
+
+h1 {
+  font-size: clamp(2rem, 5vw, 4rem);
+  line-height: 1;
+  margin: 0;
+}
+
+h2, h3 {
+  margin: 0;
+}
+
+.subtext,
+.card p,
+.stat-card p,
+.mini-card p,
+.summary p {
+  color: #cbd5e1;
+}
+
+.subtext {
+  max-width: 650px;
+  margin-top: 14px;
+}
+
+.grid.two {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.card,
+.stat-card,
+.mini-card {
+  border: 1px solid rgba(249, 115, 22, 0.22);
+  background: rgba(15, 23, 42, 0.82);
+  border-radius: 24px;
+  box-shadow: 0 22px 80px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(12px);
+}
+
+.card {
+  padding: 22px;
+  display: grid;
+  gap: 18px;
+}
+
+.stat-card,
+.mini-card {
+  padding: 18px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.stat-card strong,
+.mini-card strong {
+  font-size: 1.25rem;
+}
+
+.title-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.title-row svg,
+.stat-card svg,
+.mini-card svg {
+  color: #fb923c;
+}
+
+.icon-box {
+  width: 38px;
+  height: 38px;
+  border-radius: 14px;
+  background: rgba(249, 115, 22, 0.16);
+  display: grid;
+  place-items: center;
+  flex: 0 0 auto;
+}
+
+.form-grid,
+.controls {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.controls {
+  grid-template-columns: 1fr 1fr;
+}
+
+input,
+select {
+  width: 100%;
+  border: 1px solid rgba(249, 115, 22, 0.22);
+  background: #050505;
+  color: white;
+  border-radius: 14px;
+  padding: 12px 14px;
+  outline: none;
+}
+
+input:focus,
+select:focus {
+  border-color: #fb923c;
+  box-shadow: 0 0 0 4px rgba(249, 115, 22, 0.14);
+}
+
+.btn {
+  border: none;
+  background: #f97316;
+  color: white;
+  border-radius: 14px;
+  padding: 12px 16px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  width: fit-content;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: #ea580c;
+}
+
+.list {
+  display: grid;
+  gap: 12px;
+}
+
+.list-item,
+.shopping-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 14px;
+  border-radius: 18px;
+  background: rgba(249, 115, 22, 0.09);
+  border: 1px solid rgba(249, 115, 22, 0.13);
+}
+
+.list-item p,
+.shopping-item p {
+  margin: 4px 0 0;
+  font-size: 0.92rem;
+}
+
+.icon-btn {
+  border: none;
+  background: transparent;
+  color: #cbd5e1;
+  cursor: pointer;
+}
+
+.icon-btn:hover {
+  color: #fb923c;
+}
+
+.shopping-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: start;
+}
+
+.shopping-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 18px;
+}
+
+.item-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.summary {
+  background: #050505;
+  border: 1px solid rgba(249, 115, 22, 0.28);
+  border-radius: 22px;
+  padding: 20px;
+  display: grid;
+  gap: 10px;
+}
+
+.tip {
+  margin-top: 8px;
+  padding: 12px;
+  border-radius: 16px;
+  background: rgba(249, 115, 22, 0.12);
+  color: #fed7aa;
+  font-size: 0.92rem;
+}
+
+@media (max-width: 850px) {
+  .hero,
+  .shopping-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .stats,
+  .grid.two,
+  .shopping-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-grid,
+  .controls {
+    grid-template-columns: 1fr;
+  }
+
+  .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
